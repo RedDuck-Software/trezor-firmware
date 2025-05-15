@@ -9847,7 +9847,10 @@
 "T2T1_pt_zcash-test_sign_tx.py::test_spend_v4_input": "b949e15f2f00e30f09fabb3482edd5496b354f31249ad1ffc370f6dcc4599d53",
 "T2T1_pt_zcash-test_sign_tx.py::test_spend_v5_input": "8f83c63d0989aee5e2bfcfaa26ec6ce5e76bd37f98851b8433e342ee152956fe",
 "T2T1_pt_zcash-test_sign_tx.py::test_unified_address": "cd5afddaa26b1bbb5c609d2e70a8eb502ce757cf8725df938591749e4a3f2b75",
-"T2T1_pt_zcash-test_sign_tx.py::test_version_group_id_missing": "e9e80e1bfd347b598699a7a84deb8932eff90fc5fb8b56771453e06fe3c4c216"
+"T2T1_pt_zcash-test_sign_tx.py::test_version_group_id_missing": "e9e80e1bfd347b598699a7a84deb8932eff90fc5fb8b56771453e06fe3c4c216",
+"T2T1_misc-test_hello_world.py::test_hello_world[George-2-True]": "061e096ed3b47be216f4c7eb01999b4ec8bace1e3608a0de1fc128747b28a060",
+"T2T1_misc-test_hello_world.py::test_hello_world[Hannah-None-False]": "80a6e289138a604cf351a29511cf6f85e2243591317894703152787e1351a1a3",
+"T2T1_misc-test_hello_world.py::test_hello_world[John-3-False]": "80a6e289138a604cf351a29511cf6f85e2243591317894703152787e1351a1a3"
 },
 "persistence_tests": {
 "T2T1_en_test_safety_checks.py::test_safety_checks_level_after_reboot[SafetyCheckLevel.PromptAlways--081810a6": "d1e7905797c25c34e1be947b2cbcb655b4497068e6e6bdaccf88a1c821339085",

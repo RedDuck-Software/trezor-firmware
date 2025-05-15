@@ -28,3 +28,6 @@ make build_unix
 
 ### Test emulator:
 ./emu.py
+
+### Test hello world with emulator:
+trezorctl helloworld say-hello RedDuck -a 3 -d

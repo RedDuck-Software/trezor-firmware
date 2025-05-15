@@ -326,64 +326,6 @@ class EthereumDataType(IntEnum):
     STRUCT = 8
 
 
-class MoneroNetworkType(IntEnum):
-    MAINNET = 0
-    TESTNET = 1
-    STAGENET = 2
-    FAKECHAIN = 3
-
-
-class NEMMosaicLevy(IntEnum):
-    MosaicLevy_Absolute = 1
-    MosaicLevy_Percentile = 2
-
-
-class NEMSupplyChangeType(IntEnum):
-    SupplyChange_Increase = 1
-    SupplyChange_Decrease = 2
-
-
-class NEMModificationType(IntEnum):
-    CosignatoryModification_Add = 1
-    CosignatoryModification_Delete = 2
-
-
-class NEMImportanceTransferMode(IntEnum):
-    ImportanceTransfer_Activate = 1
-    ImportanceTransfer_Deactivate = 2
-
-
-class StellarAssetType(IntEnum):
-    NATIVE = 0
-    ALPHANUM4 = 1
-    ALPHANUM12 = 2
-
-
-class StellarMemoType(IntEnum):
-    NONE = 0
-    TEXT = 1
-    ID = 2
-    HASH = 3
-    RETURN = 4
-
-
-class StellarSignerType(IntEnum):
-    ACCOUNT = 0
-    PRE_AUTH = 1
-    HASH = 2
-
-
-class TezosContractType(IntEnum):
-    Implicit = 0
-    Originated = 1
-
-
-class TezosBallotType(IntEnum):
-    Yay = 0
-    Nay = 1
-    Pass = 2
-
-
 class MessageType(IntEnum):
     Initialize = 0
     Ping = 1
@@ -619,6 +561,8 @@ class MessageType(IntEnum):
     SolanaAddress = 903
     SolanaSignTx = 904
     SolanaTxSignature = 905
+    HelloWorldRequest = 1200
+    HelloWorldResponse = 1201
     NostrGetPubkey = 2001
     NostrPubkey = 2002
     NostrSignEvent = 2003
@@ -627,6 +571,64 @@ class MessageType(IntEnum):
     BenchmarkNames = 9101
     BenchmarkRun = 9102
     BenchmarkResult = 9103
+
+
+class MoneroNetworkType(IntEnum):
+    MAINNET = 0
+    TESTNET = 1
+    STAGENET = 2
+    FAKECHAIN = 3
+
+
+class NEMMosaicLevy(IntEnum):
+    MosaicLevy_Absolute = 1
+    MosaicLevy_Percentile = 2
+
+
+class NEMSupplyChangeType(IntEnum):
+    SupplyChange_Increase = 1
+    SupplyChange_Decrease = 2
+
+
+class NEMModificationType(IntEnum):
+    CosignatoryModification_Add = 1
+    CosignatoryModification_Delete = 2
+
+
+class NEMImportanceTransferMode(IntEnum):
+    ImportanceTransfer_Activate = 1
+    ImportanceTransfer_Deactivate = 2
+
+
+class StellarAssetType(IntEnum):
+    NATIVE = 0
+    ALPHANUM4 = 1
+    ALPHANUM12 = 2
+
+
+class StellarMemoType(IntEnum):
+    NONE = 0
+    TEXT = 1
+    ID = 2
+    HASH = 3
+    RETURN = 4
+
+
+class StellarSignerType(IntEnum):
+    ACCOUNT = 0
+    PRE_AUTH = 1
+    HASH = 2
+
+
+class TezosContractType(IntEnum):
+    Implicit = 0
+    Originated = 1
+
+
+class TezosBallotType(IntEnum):
+    Yay = 0
+    Nay = 1
+    Pass = 2
 
 
 class BenchmarkListNames(protobuf.MessageType):
@@ -5218,6 +5220,40 @@ class EthereumFieldType(protobuf.MessageType):
         self.size = size
         self.entry_type = entry_type
         self.struct_name = struct_name
+
+
+class HelloWorldRequest(protobuf.MessageType):
+    MESSAGE_WIRE_TYPE = 1200
+    FIELDS = {
+        1: protobuf.Field("name", "string", repeated=False, required=True),
+        2: protobuf.Field("amount", "uint32", repeated=False, required=False, default=1),
+        3: protobuf.Field("show_display", "bool", repeated=False, required=False, default=None),
+    }
+
+    def __init__(
+        self,
+        *,
+        name: "str",
+        amount: Optional["int"] = 1,
+        show_display: Optional["bool"] = None,
+    ) -> None:
+        self.name = name
+        self.amount = amount
+        self.show_display = show_display
+
+
+class HelloWorldResponse(protobuf.MessageType):
+    MESSAGE_WIRE_TYPE = 1201
+    FIELDS = {
+        1: protobuf.Field("text", "string", repeated=False, required=True),
+    }
+
+    def __init__(
+        self,
+        *,
+        text: "str",
+    ) -> None:
+        self.text = text
 
 
 class MoneroTransactionSourceEntry(protobuf.MessageType):

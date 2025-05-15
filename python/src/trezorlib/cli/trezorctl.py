@@ -42,6 +42,7 @@ from . import (
     ethereum,
     fido,
     firmware,
+    hello_world,
     monero,
     nem,
     nostr,
@@ -419,6 +420,7 @@ cli.add_command(firmware.cli)
 cli.add_command(debug.cli)
 cli.add_command(benchmark.cli)
 cli.add_command(ble.cli)
+cli.add_command(hello_world.cli)
 
 #
 # Main

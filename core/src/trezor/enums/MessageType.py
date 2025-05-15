@@ -242,6 +242,8 @@ if not utils.BITCOIN_ONLY:
     SolanaAddress = 903
     SolanaSignTx = 904
     SolanaTxSignature = 905
+    HelloWorldRequest = 1200
+    HelloWorldResponse = 1201
     NostrGetPubkey = 2001
     NostrPubkey = 2002
     NostrSignEvent = 2003

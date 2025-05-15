@@ -83,6 +83,8 @@ trezor_message_impl! {
     DebugLinkWatchLayout => MessageType_DebugLinkWatchLayout,
     DebugLinkResetDebugEvents => MessageType_DebugLinkResetDebugEvents,
     DebugLinkOptigaSetSecMax => MessageType_DebugLinkOptigaSetSecMax,
+    HelloWorldRequest => MessageType_HelloWorldRequest,
+    HelloWorldResponse => MessageType_HelloWorldResponse,
     BenchmarkListNames => MessageType_BenchmarkListNames,
     BenchmarkNames => MessageType_BenchmarkNames,
     BenchmarkRun => MessageType_BenchmarkRun,

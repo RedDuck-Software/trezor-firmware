@@ -286,54 +286,6 @@ if TYPE_CHECKING:
         ARRAY = 7
         STRUCT = 8
 
-    class MoneroNetworkType(IntEnum):
-        MAINNET = 0
-        TESTNET = 1
-        STAGENET = 2
-        FAKECHAIN = 3
-
-    class NEMMosaicLevy(IntEnum):
-        MosaicLevy_Absolute = 1
-        MosaicLevy_Percentile = 2
-
-    class NEMSupplyChangeType(IntEnum):
-        SupplyChange_Increase = 1
-        SupplyChange_Decrease = 2
-
-    class NEMModificationType(IntEnum):
-        CosignatoryModification_Add = 1
-        CosignatoryModification_Delete = 2
-
-    class NEMImportanceTransferMode(IntEnum):
-        ImportanceTransfer_Activate = 1
-        ImportanceTransfer_Deactivate = 2
-
-    class StellarAssetType(IntEnum):
-        NATIVE = 0
-        ALPHANUM4 = 1
-        ALPHANUM12 = 2
-
-    class StellarMemoType(IntEnum):
-        NONE = 0
-        TEXT = 1
-        ID = 2
-        HASH = 3
-        RETURN = 4
-
-    class StellarSignerType(IntEnum):
-        ACCOUNT = 0
-        PRE_AUTH = 1
-        HASH = 2
-
-    class TezosContractType(IntEnum):
-        Implicit = 0
-        Originated = 1
-
-    class TezosBallotType(IntEnum):
-        Yay = 0
-        Nay = 1
-        Pass = 2
-
     class MessageType(IntEnum):
         Initialize = 0
         Ping = 1
@@ -569,6 +521,8 @@ if TYPE_CHECKING:
         SolanaAddress = 903
         SolanaSignTx = 904
         SolanaTxSignature = 905
+        HelloWorldRequest = 1200
+        HelloWorldResponse = 1201
         NostrGetPubkey = 2001
         NostrPubkey = 2002
         NostrSignEvent = 2003
@@ -577,3 +531,51 @@ if TYPE_CHECKING:
         BenchmarkNames = 9101
         BenchmarkRun = 9102
         BenchmarkResult = 9103
+
+    class MoneroNetworkType(IntEnum):
+        MAINNET = 0
+        TESTNET = 1
+        STAGENET = 2
+        FAKECHAIN = 3
+
+    class NEMMosaicLevy(IntEnum):
+        MosaicLevy_Absolute = 1
+        MosaicLevy_Percentile = 2
+
+    class NEMSupplyChangeType(IntEnum):
+        SupplyChange_Increase = 1
+        SupplyChange_Decrease = 2
+
+    class NEMModificationType(IntEnum):
+        CosignatoryModification_Add = 1
+        CosignatoryModification_Delete = 2
+
+    class NEMImportanceTransferMode(IntEnum):
+        ImportanceTransfer_Activate = 1
+        ImportanceTransfer_Deactivate = 2
+
+    class StellarAssetType(IntEnum):
+        NATIVE = 0
+        ALPHANUM4 = 1
+        ALPHANUM12 = 2
+
+    class StellarMemoType(IntEnum):
+        NONE = 0
+        TEXT = 1
+        ID = 2
+        HASH = 3
+        RETURN = 4
+
+    class StellarSignerType(IntEnum):
+        ACCOUNT = 0
+        PRE_AUTH = 1
+        HASH = 2
+
+    class TezosContractType(IntEnum):
+        Implicit = 0
+        Originated = 1
+
+    class TezosBallotType(IntEnum):
+        Yay = 0
+        Nay = 1
+        Pass = 2
